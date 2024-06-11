@@ -41,7 +41,7 @@ class _MyHomePageHelperState extends State<MyHomePageHelper> {
     try {
       final response = await http.post(
         Uri.parse(
-            'http://${widget.ipAddress}/mobpro/get_data_helper.php'), // Ganti dengan URL server Anda
+            'https://api.tba.transportberkaharmada.my.id/get_data_helper.php'), // Ganti dengan URL server Anda
         body: {'email': widget.email}, // Kirim email ke server
       );
 

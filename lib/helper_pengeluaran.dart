@@ -45,7 +45,7 @@ class _PengeluaranHelperState extends State<PengeluaranHelper> {
 
   Future<void> fetchData() async {
     final response =
-        await http.get(Uri.parse('http://10.0.2.2/mobpro/get_pengeluaran.php'));
+        await http.get(Uri.parse('https://api.tba.transportberkaharmada.my.id/get_pengeluaran.php'));
     print('Response body: ${response.body}');
     if (response.statusCode == 200) {
       try {
@@ -94,7 +94,7 @@ class _PengeluaranHelperState extends State<PengeluaranHelper> {
       String jenis, String jumlah, String tanggal, File image) async {
     final jam = DateTime.now().toString().split(' ')[1];
     var request = http.MultipartRequest(
-        'POST', Uri.parse('http://10.0.2.2/mobpro/add_pengeluaran.php'));
+        'POST', Uri.parse('https://api.tba.transportberkaharmada.my.id/add_pengeluaran.php'));
 
     request.fields['jenis'] = jenis;
     request.fields['jumlah'] = jumlah;
@@ -118,7 +118,7 @@ class _PengeluaranHelperState extends State<PengeluaranHelper> {
 
   Future<Map> fetchDataById(int id_keuangan) async {
     final response = await http.get(Uri.parse(
-        'http://10.0.2.2/mobpro/get_pengeluaranbyid.php?id_keuangan=$id_keuangan'));
+        'https://api.tba.transportberkaharmada.my.id/get_pengeluaranbyid.php?id_keuangan=$id_keuangan'));
     print('Response body: ${response.body}');
 
     var map = jsonDecode(response.body);
@@ -138,7 +138,7 @@ class _PengeluaranHelperState extends State<PengeluaranHelper> {
 
   Future<void> updatePengeluaran(int id, String jenis, String jumlah,
       String tanggal, File? fotoBukti) async {
-    var uri = Uri.parse('http://10.0.2.2/mobpro/update_pengeluaran.php');
+    var uri = Uri.parse('https://api.tba.transportberkaharmada.my.id/update_pengeluaran.php');
     var request = http.MultipartRequest('POST', uri);
 
     request.fields['id_keuangan'] = id.toString();
@@ -167,7 +167,7 @@ class _PengeluaranHelperState extends State<PengeluaranHelper> {
 
   Future<void> deletePengeluaran(int id) async {
     final response = await http.post(
-      Uri.parse('http://10.0.2.2/mobpro/delete_pengeluaran.php'),
+      Uri.parse('https://api.tba.transportberkaharmada.my.id/delete_pengeluaran.php'),
       body: {'id': id.toString()},
     );
 
@@ -505,7 +505,7 @@ class _PengeluaranHelperState extends State<PengeluaranHelper> {
                                         children: [
                                           if (item['foto_bukti'] != null)
                                             Image.network(
-                                              "http://10.0.2.2/mobpro/${item['foto_bukti']}",
+                                              "https://api.tba.transportberkaharmada.my.id/${item['foto_bukti']}",
                                               height: 300,
                                               width: 300,
                                             )

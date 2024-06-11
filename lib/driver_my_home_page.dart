@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePageDriver> {
   Future<void> fetchData() async { // Langkah 2: Buat fungsi async untuk mengambil data dari server
     try {
       final response = await http.post(
-        Uri.parse('http://${widget.ipAddress}/mobpro/get_data_driver.php'), // Ganti dengan URL server Anda
+        Uri.parse('https://api.tba.transportberkaharmada.my.id/get_data_driver.php'), // Ganti dengan URL server Anda
         body: {'email': widget.email}, // Kirim email ke server
       );
 
