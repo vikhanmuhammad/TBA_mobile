@@ -76,199 +76,200 @@ class _MyHomePageState extends State<MyHomePageDriver> {
   Widget build(BuildContext context) {
 
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 71, 169, 146),
-      body: Center(
-        child: Align(
-          alignment: Alignment.topCenter,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 55),
-            child: Stack(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 40.0),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: '${_getHari(currentTime.weekday)}, ${currentTime.day} ${_getBulan(currentTime.month)} ${currentTime.year}\n',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.normal,
-                                color: Color.fromARGB(255, 255, 255, 255),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 55),
+              child: Stack(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 40.0),
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '${_getHari(currentTime.weekday)}, ${currentTime.day} ${_getBulan(currentTime.month)} ${currentTime.year}\n',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.normal,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 1),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 40.0),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'Selamat Pagi, \n',
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 255, 255, 255),
+                      const SizedBox(height: 1),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 40.0),
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'Selamat Pagi, \n',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
                               ),
-                            ),
-                            TextSpan(
-                              text: '$namaDriver!',
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 255, 255, 255),
+                              TextSpan(
+                                text: '$namaDriver!',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 150),
-                    Expanded(
-                      child: Container(
+                      const SizedBox(height: 150),
+                      //Disini
+                      Container(
                         width: screenWidth,
+                        height: screenHeight,
                         decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 243, 243, 243),
+                          color: Color.fromARGB(255, 255, 255, 255),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(30),
                             topRight: Radius.circular(30),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                Positioned(
-                  top: 120,
-                  left: 0,
-                  right: 0,
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 350,
-                        width: screenWidth - 50,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: const Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            // const SizedBox(height: 2),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 30.0, top: 30.0),
-                              child: RichText(
-                                text: const TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'Perjalanan\n',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
+                    ],
+                  ),
+                  Positioned(
+                    top: 120,
+                    left: 0,
+                    right: 0,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 350,
+                          width: screenWidth - 50,
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: const Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // const SizedBox(height: 2),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30.0, top: 30.0),
+                                child: RichText(
+                                  text: const TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: 'Perjalanan\n',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(height: 2),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 30.0),
-                              child: RichText(
-                                text: const TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'Kota Awal',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey,
+                              const SizedBox(height: 2),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30.0),
+                                child: RichText(
+                                  text: const TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: 'Kota Awal',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(height: 2),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 30.0),
-                              child: RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: '$tempatAwal\n',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
+                              const SizedBox(height: 2),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30.0),
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '$tempatAwal\n',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(height: 2),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 30.0),
-                              child: RichText(
-                                text: const TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'Kota Tujuan',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey,
+                              const SizedBox(height: 2),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30.0),
+                                child: RichText(
+                                  text: const TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: 'Kota Tujuan',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(height: 2),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 30.0),
-                              child: RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: '$tempatAkhir\n',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
+                              const SizedBox(height: 2),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30.0),
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: '$tempatAkhir\n',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(height: 2),
-                            Padding(
-                              padding: EdgeInsets.only(left: 30.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(
-                                    child: Column(
+                              const SizedBox(height: 2),
+                              Padding(
+                                padding: EdgeInsets.only(left: 30.0, right: 40.0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
@@ -290,10 +291,7 @@ class _MyHomePageState extends State<MyHomePageDriver> {
                                         ),
                                       ],
                                     ),
-                                  ),
-                                  SizedBox(width: 16),
-                                  Expanded(
-                                    child: Column(
+                                    Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
@@ -315,183 +313,183 @@ class _MyHomePageState extends State<MyHomePageDriver> {
                                         ),
                                       ],
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(height: 25), // Jarak antara jam/tanggal dan tombol
-                            Center( // Tempatkan tombol di tengah
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => MapViewDriver(email: widget.email, ipAddress: widget.ipAddress,),
-                                    ),
-                                  );
-                                },
-                                // Warna teks tombol saat di atas latar belakang
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color.fromARGB(255, 71, 169, 146),
-                                  minimumSize: Size((screenWidth - 125), 50), // Ukuran minimum tombol (panjang, lebar)
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10), // Border radius tombol
-                                  ),
-                                ),
-                                child: const Text(
-                                  'Selengkapnya',
-                                  style: TextStyle(
-                                    fontSize: 18, // Ukuran teks tombol
-                                    color: Colors.white, // Warna teks tombol
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 18),
-                      const Align(
-                        alignment: Alignment.centerLeft, // Geser teks ke kiri
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 40.0), // Padding kiri 30.0
-                          child: Text(
-                            'Armada',
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 0, 0, 0),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 18),
-                      Container(
-                        height: 100,
-                        width: screenWidth - 75, // Atur lebar container tambahan
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5), // Warna shadow
-                              spreadRadius: 4, // Jarak penyebaran shadow
-                              blurRadius: 5, // Tingkat blur shadow
-                              offset: const Offset(0, 0), // Posisi shadow
-                            ),
-                          ],
-                        ), 
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(left: 15.0), // Padding kiri 20
-                                child: CircleAvatar(
-                                  radius: 35, // Ukuran radius lingkaran
-                                  backgroundColor: Colors.grey, // Warna latar belakang lingkaran
-                                  // Isi lingkaran di sini (misalnya, gambar)
-                                ),
-                              ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 15.0, top: 15.0), // Padding kiri 20
-                                      child: Text(
-                                              'Julukan',
-                                              style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.normal,
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 15.0), // Padding kiri 20
-                                      child: Text(
-                                              '$julukan',
-                                              style: TextStyle(
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color.fromARGB(255, 71, 169, 146),
-                                              ),
-                                            ),
-                                    ),
-                                    Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 15.0, top: 5.0),
-                                                child: Text(
-                                                  'No Body',
-                                                  style: TextStyle(
-                                                    fontSize: 9,
-                                                    fontWeight: FontWeight.normal,
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 15.0),
-                                                  child: Text(
-                                                  '$noBody',
-                                                  style: TextStyle(
-                                                    fontSize: 11,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 15.0, top: 5.0),
-                                                child: Text(
-                                                  'Plat No',
-                                                  style: TextStyle(
-                                                    fontSize: 9,
-                                                    fontWeight: FontWeight.normal,
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 15.0),
-                                                  child: Text(
-                                                  '$platDepan $noPlat $platBelakang',
-                                                  style: TextStyle(
-                                                    fontSize: 11,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.black,
-                                                  ),
-                                                ),
-                                              ), 
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
                                   ],
                                 ),
-                              // Anda dapat menambahkan konten lain di sini
+                              ),
+                              const SizedBox(height: 25), // Jarak antara jam/tanggal dan tombol
+                              Center( // Tempatkan tombol di tengah
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => MapViewDriver(email: widget.email, ipAddress: widget.ipAddress,),
+                                      ),
+                                    );
+                                  },
+                                  // Warna teks tombol saat di atas latar belakang
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color.fromARGB(255, 71, 169, 146),
+                                    minimumSize: Size((screenWidth - 125), 50), // Ukuran minimum tombol (panjang, lebar)
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10), // Border radius tombol
+                                    ),
+                                  ),
+                                  child: const Text(
+                                    'Selengkapnya',
+                                    style: TextStyle(
+                                      fontSize: 18, // Ukuran teks tombol
+                                      color: Colors.white, // Warna teks tombol
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
-                      ),
-                    ],
+                        const SizedBox(height: 18),
+                        const Align(
+                          alignment: Alignment.centerLeft, // Geser teks ke kiri
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 40.0), // Padding kiri 30.0
+                            child: Text(
+                              'Armada',
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 0, 0, 0),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 18),
+                        Container(
+                          height: 100,
+                          width: screenWidth - 75, // Atur lebar container tambahan
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5), // Warna shadow
+                                spreadRadius: 4, // Jarak penyebaran shadow
+                                blurRadius: 5, // Tingkat blur shadow
+                                offset: const Offset(0, 0), // Posisi shadow
+                              ),
+                            ],
+                          ), 
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(left: 15.0), // Padding kiri 20
+                                  child: CircleAvatar(
+                                    radius: 35, // Ukuran radius lingkaran
+                                    backgroundColor: Colors.grey, // Warna latar belakang lingkaran
+                                    // Isi lingkaran di sini (misalnya, gambar)
+                                  ),
+                                ),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 15.0, top: 15.0), // Padding kiri 20
+                                        child: Text(
+                                                'Julukan',
+                                                style: TextStyle(
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: Colors.black,
+                                                ),
+                                              ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 15.0), // Padding kiri 20
+                                        child: Text(
+                                                '$julukan',
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color.fromARGB(255, 71, 169, 146),
+                                                ),
+                                              ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsets.only(left: 15.0, top: 5.0),
+                                                  child: Text(
+                                                    'No Body',
+                                                    style: TextStyle(
+                                                      fontSize: 9,
+                                                      fontWeight: FontWeight.normal,
+                                                      color: Colors.black,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.only(left: 15.0),
+                                                    child: Text(
+                                                    '$noBody',
+                                                    style: TextStyle(
+                                                      fontSize: 11,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsets.only(left: 15.0, top: 5.0),
+                                                  child: Text(
+                                                    'Plat No',
+                                                    style: TextStyle(
+                                                      fontSize: 9,
+                                                      fontWeight: FontWeight.normal,
+                                                      color: Colors.black,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.only(left: 15.0),
+                                                    child: Text(
+                                                    '$platDepan $noPlat $platBelakang',
+                                                    style: TextStyle(
+                                                      fontSize: 11,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black,
+                                                    ),
+                                                  ),
+                                                ), 
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                // Anda dapat menambahkan konten lain di sini
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
