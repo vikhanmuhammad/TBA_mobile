@@ -45,7 +45,8 @@ class _PengeluaranHelperState extends State<PengeluaranHelper> {
 
   Future<void> fetchData() async {
     final response =
-        await http.get(Uri.parse('https://api.tba.transportberkaharmada.my.id/get_pengeluaran.php'));
+        // await http.get(Uri.parse('https://api.tba.transportberkaharmada.my.id/get_pengeluaran.php'));
+        await http.get(Uri.parse('http://10.0.2.2/mobpro/get_pengeluaran.php'));
     print('Response body: ${response.body}');
     if (response.statusCode == 200) {
       try {

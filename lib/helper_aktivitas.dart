@@ -28,7 +28,8 @@ class _AktivitasHelperState extends State<AktivitasHelper> {
   Future<void> fetchData() async {
     try {
       final response = await http.post(
-        Uri.parse('https://api.tba.transportberkaharmada.my.id/get_data_helper.php'),
+        // Uri.parse('https://api.tba.transportberkaharmada.my.id/get_data_helper.php'),
+        Uri.parse('http://10.0.2.2/mobpro/get_data_helper.php'),
         body: {'email': widget.email},
       );
 

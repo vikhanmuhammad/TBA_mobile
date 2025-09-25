@@ -109,14 +109,14 @@ class _LoginScreenState extends State<LoginScreen> {
     var password = _passwordController.text;
     var ipAddress = '10.0.2.2';
 
-    // // URL pertama
-    // var url1 = Uri.parse('http://$ipAddress/mobpro/login.php');
-    // // URL kedua
-    // var url2 = Uri.parse('http://$ipAddress/mobpro/login_helper.php');
     // URL pertama
-    var url1 = Uri.parse('https://api.tba.transportberkaharmada.my.id/login.php');
+    var url1 = Uri.parse('http://$ipAddress/mobpro/login.php');
     // URL kedua
-    var url2 = Uri.parse('https://api.tba.transportberkaharmada.my.id/login_helper.php');
+    var url2 = Uri.parse('http://$ipAddress/mobpro/login_helper.php');
+    // // URL pertama
+    // var url1 = Uri.parse('http://192.168.1.1/mobpro/login.php');
+    // // URL kedua
+    // var url2 = Uri.parse('http://192.168.1.1/mobpro/login_helper.php');
 
     // Request ke URL pertama
     var response1 =

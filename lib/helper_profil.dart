@@ -32,7 +32,8 @@ class _ProfilHelperState extends State<ProfilHelper> {
     print('Fetching data...');
     try {
       final response = await http.post(
-        Uri.parse('https://api.tba.transportberkaharmada.my.id/get_data_helper.php'),
+        // Uri.parse('https://api.tba.transportberkaharmada.my.id/get_data_helper.php'),
+        Uri.parse('http://10.0.2.2/mobpro/get_data_helper.php'),
         body: {'email': widget.email},
       );
 
